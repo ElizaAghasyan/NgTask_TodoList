@@ -1,0 +1,15 @@
+<section class="todoapp">
+  <div>
+    <input [(ngModel)]="nameValue" class="new-todo" placeholder="What needs to be done?" (keyup.enter)="addItem()">
+    <button class="add" (click)="addItem()">ADD</button>
+
+    <section class="main">
+      <ul class="todo-list">
+        <li>
+          <app-todo-item *ngFor="let todo of todos; index as id" (delete)="deleteTodo(id)" [todo]="todo"></app-todo-item>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+</section>

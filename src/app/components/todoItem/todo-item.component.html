@@ -1,0 +1,27 @@
+<ng-container *ngIf="todo">
+  <li>
+    <div class="view">
+      <ng-container *ngIf="!active">
+        <p class="todo-item" >{{ todo.name | capitalize }}</p>
+        <span class="date">{{ todo.date | date: 'full' }}</span>
+        <button (click)="remove(todo.id)" class="remove">
+          <fa-icon [icon]="faTimes"></fa-icon>
+        </button>
+        <button (click)="changeActive()" class="edit">
+          <fa-icon [icon]="check"></fa-icon>
+        </button>
+      </ng-container>
+
+      <ng-container *ngIf="active">
+        <input [(ngModel)]="editValue" class="todo-item editInput" placeholder="Edit Task"/>
+        <span class="date">{{ todo.date | date: 'full' }}</span>
+        <button (click)="changeActive()" class="remove">
+          <fa-icon [icon]="faTimes"></fa-icon>
+        </button>
+        <button (click)="onChange()" class="edit">
+          <fa-icon [icon]="check"></fa-icon>
+        </button>
+      </ng-container>
+    </div>
+  </li>
+</ng-container>

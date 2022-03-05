@@ -1,0 +1,66 @@
+.view {
+  margin: 1em 2.2em;
+}
+.todo-item {
+  color: #6b6565;
+  margin: .1em;
+  transition: color 0.4s;
+}
+
+.date {
+  font-size: .6em;
+  color: #999999;
+  font-family: sans-serif;
+}
+
+.remove {
+  opacity: .3;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  right: 9rem;
+  bottom: 0;
+  font-size: 1.2rem;
+  color: #cc9a9a;
+  transition: color 0.2s ease-out;
+  border: 0;
+  background-color: transparent;
+}
+
+.remove:hover {
+  color: #af5b5e;
+  opacity: 1;
+}
+
+li {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px solid #ededed;
+}
+
+.editInput {
+  border: none;
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+  display: block;
+  outline: none;
+}
+
+.edit {
+  opacity: .3;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  right: 7rem;
+  bottom: 0;
+  font-size: 1.2rem;
+  color: #cc9a9a;
+  transition: color 0.2s ease-out;
+  border: 0;
+  background-color: transparent;
+}
+
+.edit:hover {
+  color: #af5b5e;
+  opacity: 1;
+}
