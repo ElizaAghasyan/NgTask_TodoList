@@ -25,10 +25,11 @@ export class TodoItemComponent implements OnChanges{
 
   changeActive() {
     this.active = !this.active
-    console.log(this.active)
   }
 
   ngOnChanges(element: SimpleChanges) {
+    console.log(element)
+    // this.todo?.name !== undefined ? this.todo.name = this.editValue : ''
   }
 
   onChange() {
